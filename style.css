@@ -15,6 +15,18 @@ body {
 .sidebar {
     grid-row: 1 / -1;
     grid-column: 1;
+
+    background-color: rgb(0, 162, 255);
+}
+.sidebar-item {
+    color: white;
+
+    display: grid;
+    grid-template-columns: 1.5em 1fr;
+    grid-template-rows: 1.5em;
+}
+.sidebar-item>svg {
+    fill: white;
 }
 
 .search-bar {
