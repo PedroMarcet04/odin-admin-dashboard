@@ -159,8 +159,12 @@ body {
 
     display: grid;
     grid-template-columns: 1fr 200px;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 350px 350px;
     gap: 16px;
+}
+.main-content>div>p {
+    font-weight: bold;
+    margin: 8px;
 }
 .projects {
     grid-row: 1 / -1;
@@ -181,16 +185,28 @@ body {
     display: grid;
     grid-template-rows: 1rem 1fr 32px;
 }
-.card>p {
+.card>.title {
+    font-weight: bold;
+}
+.card>.body {
+    font-size: small;
     overflow: hidden;
-    line-clamp: 5;
 }
 .card>.actions {
     justify-self: end;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
 }
 .card>.actions>button {
-    border: 1px solid red;
+    border: 0;
+    background-color: transparent;
+}
+.card>.actions>button:hover {
+    position: relative;
+    bottom: 2px;
 }
 .card>.actions>button>svg {
+    width: 24px;
     fill: black;
 }
