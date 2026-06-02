@@ -6,3 +6,4 @@ https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin
 
 ## Credits
 - Icons: https://pictogrammers.com/library/mdi/
+- [Saplak] (https://www.pexels.com/photo/close-up-of-capybaras-lying-on-the-grass-19289108/)
