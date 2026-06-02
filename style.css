@@ -203,8 +203,7 @@ body {
     background-color: transparent;
 }
 .card>.actions>button:hover {
-    position: relative;
-    bottom: 2px;
+    padding-bottom: 4px;
 }
 .card>.actions>button>svg {
     width: 24px;
@@ -234,4 +233,31 @@ body {
 }
 .announcement>.body {
     font-size: smaller;
+}
+.trending {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+}
+.trending-users {
+    background-color: white;
+    border-radius: 16px;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+.users {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    font-size: small;
+}
+.users>.profile-picture {
+    grid-row: 1 / -1;
+}
+.users>.username {
+    align-self: end;
+    font-weight: bold;
+}
+.users>.project-name {
+    align-self: start;
 }
