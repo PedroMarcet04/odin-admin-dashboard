@@ -1,3 +1,7 @@
+:root {
+    --light-blue: rgb(0, 162, 255);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +24,7 @@ body {
     grid-column: 1;
 
     padding: 8px;
-    background-color: rgb(0, 162, 255);
+    background-color: var(--light-blue);
     
     display: grid;
     grid-template-columns: 1fr;
@@ -85,10 +89,13 @@ body {
 }
 
 .profile-picture {
-    width: 80%;
+    width: 56px;
     aspect-ratio: 1;
     border-radius: 50%;
     object-fit: cover;
+}
+.profile-picture.large {
+    width: 80px;
 }
 
 .account-corner {
@@ -107,6 +114,40 @@ body {
 .control-bar {
     grid-row: 2;
     grid-column: 2 / -1;
+
+    background-color: white;
+
+    display: flex;
+    justify-content: space-between;
+}
+.control-bar>.account-info {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 1rem 1fr;
+    align-items: center;
+    padding: 8px;
+}
+.control-bar>.account-info>img {
+    justify-self: center;
+    grid-row: 1 / -1;
+}
+.control-bar>.account-info>.user-name {
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+.control-bar>.control-buttons {
+    display: grid;
+    padding: 16px;
+    grid-template-columns: repeat(3, 10ch);
+    gap: 16px;
+    align-items: center;
+}
+.control-buttons>button {
+    padding: 8px;
+    border: 0;
+    border-radius: 16px;
+    color: white;
+    background-color: var(--light-blue);
 }
 
 
