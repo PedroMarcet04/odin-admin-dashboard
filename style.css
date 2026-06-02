@@ -9,24 +9,51 @@ body {
 
     display: grid;
     grid-template-rows: 50px 100px 1fr;
-    grid-template-columns: minmax(100px, 200px) 1fr 250px;
+    grid-template-columns: minmax(200px, 250px) 1fr 250px;
 }
 
 .sidebar {
     grid-row: 1 / -1;
     grid-column: 1;
 
+    padding: 8px;
     background-color: rgb(0, 162, 255);
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem repeat(11, 1.5rem);
+    align-items: center;
+    gap: 8px;
 }
-.sidebar-item {
+.sidebar>button {
+    height: 100%;
+    width: fit-content;
+
+    background-color: transparent;
+    border: 0;
     color: white;
 
+    font-size: 1rem;
+    font-weight: bold;
+
     display: grid;
-    grid-template-columns: 1.5em 1fr;
-    grid-template-rows: 1.5em;
+    grid-template-columns: 3rem 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 8px;
 }
-.sidebar-item>svg {
+.sidebar>button:hover {
+    padding-left: 8px;
+}
+/* Make first button (Dashboard) have bigger font */
+.sidebar>button:first-of-type {
+    font-size: 1.5rem;
+}
+.sidebar svg {
     fill: white;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
 }
 
 .search-bar {
